@@ -1,0 +1,99 @@
+@charset "UTF-8";
+.navbar {
+  background-color: #000;
+}
+.navbar img {
+  height: 5vh;
+  border-radius: 5px;
+}
+.navbar a {
+  color: #ffffff;
+}
+
+.promos {
+  height: 30vh;
+  padding-top: 0;
+}
+
+/* marcas */
+.container .col {
+  width: 100vw;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-1250px);
+  }
+}
+.slider {
+  background: #ffffff;
+  box-shadow: 0 10px 20px -5px rgba(0, 0, 0, 0.125);
+  height: 10vh;
+  margin: auto;
+  overflow: hidden;
+  position: relative;
+  width: 100vw;
+}
+.slider::before, .slider::after {
+  background: linear-gradient(to right, rgb(255, 255, 255) 0%, rgba(255, 255, 255, 0) 100%);
+  content: "";
+  height: 100px;
+  position: absolute;
+  width: 200px;
+  z-index: 2;
+}
+.slider::after {
+  right: 0;
+  top: 0;
+  transform: rotateZ(180deg);
+}
+.slider::before {
+  left: 0;
+  top: 0;
+}
+.slider .slide-track {
+  animation: scroll 40s linear infinite;
+  display: flex;
+  width: 750px;
+}
+.slider .slide {
+  height: 100px;
+  width: 250px;
+}
+
+/* productos */
+.productos {
+  padding: 20px 10px;
+}
+
+.card {
+  margin: 5px;
+}
+.card .btn {
+  width: 90%;
+}
+
+.card-title {
+  font-size: 20px;
+}
+
+/* ubicación */
+.ubicacion {
+  padding: 20px 0px;
+}
+
+/* footer */
+footer {
+  background-color: #000;
+}
+footer h1 {
+  color: #ffffff;
+}
+footer p {
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,124 @@
+$blanco: #ffffff;
+$negro: #000;
+
+.navbar{
+
+    background-color: $negro;
+    
+    img{
+        height: 5vh;
+        border-radius: 5px;
+    }  
+
+    a{
+        color: $blanco;
+    }
+}
+
+
+
+.promos{
+    height: 30vh;
+    padding-top: 0;
+}
+
+
+/* marcas */
+
+
+.container{
+    .col{
+        width: 100vw;
+    }
+}
+
+@mixin white-gradient {
+	background: linear-gradient(to right,  rgba(255,255,255,1) 0%,rgba(255,255,255,0) 100%);
+}
+
+$animationSpeed: 40s;
+
+@keyframes scroll {
+	0% { transform: translateX(0); }
+	100% { transform: translateX(calc(-250px * 5))}
+}
+
+
+.slider {
+	background: $blanco;
+	box-shadow: 0 10px 20px -5px rgba(0, 0, 0, .125);
+	height: 10vh;
+	margin: auto;
+	overflow:hidden;
+	position: relative;
+	width: 100vw;
+	
+	&::before,
+	&::after {
+		@include white-gradient;
+		content: "";
+		height: 100px;
+		position: absolute;
+		width: 200px;
+		z-index: 2;
+	}
+	
+	&::after {
+		right: 0;
+		top: 0;
+		transform: rotateZ(180deg);
+	}
+
+	&::before {
+		left: 0;
+		top: 0;
+	}
+	
+	.slide-track {
+		animation: scroll $animationSpeed linear infinite;
+		display: flex;
+		width: calc(250px * 3);
+	}
+	
+	.slide {
+		height: 100px;
+		width: 250px;
+	}
+}
+
+/* productos */
+
+.productos{
+    padding: 20px 10px;
+}
+
+.card{
+    margin: 5px;
+    .btn{
+        width: 90%;
+    }
+}
+
+.card-title{
+    font-size: 20px;
+}
+
+/* ubicación */
+
+.ubicacion{
+    padding: 20px 0px; 
+}
+
+
+
+/* footer */
+
+footer{
+    background-color: $negro;
+    h1{
+        color: $blanco;
+    }
+    p{
+        color: $blanco;
+    }
+}
