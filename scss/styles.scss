@@ -1,6 +1,8 @@
 $blanco: #ffffff;
 $negro: #000;
 
+
+
 .navbar{
 
     background-color: $negro;
@@ -89,7 +91,10 @@ $animationSpeed: 40s;
 /* productos */
 
 .productos{
-    padding: 20px 10px;
+    padding: 10px 10px;
+	.btn-mas{
+		padding-top: 10px;
+	}
 }
 
 .card{
@@ -106,7 +111,7 @@ $animationSpeed: 40s;
 /* ubicación */
 
 .ubicacion{
-    padding: 20px 0px; 
+    padding: 10px 0px; 
 }
 
 
